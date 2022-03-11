@@ -80,9 +80,10 @@ actor {
         Challenge 7 (hard warning) : Write a function withdraw_cycles that takes a parameter n of type Nat corresponding to the number of cycles you want to withdraw from the canister and send it to caller asumming the caller has a callback called deposit_cycles()
         Note : You need two canisters.
     */
-    type CallbackCycles = actor {deposit_cycles : shared () -> async ()}; // Notify to another canister deposit cycle to this canister ?
+    type CallbackCycles = actor {deposit_cycles : shared () -> async ()}; // Callback notify to another canister deposit cycle to this canister
+    let notifyCanister : Principal = Principal.fromText("");
 
-    public shared(msg) func withdraw_cycles(n : Nat, notifyCanister : Principal) : async () {
+    public shared(msg) func withdraw_cycles(n : Nat) : async () {
         let callbackActor : CallbackCycles = actor(Principal.toText(notifyCanister));
         await send_cycles(n, callbackActor.deposit_cycles);
     };
