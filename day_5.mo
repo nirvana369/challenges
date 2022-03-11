@@ -28,9 +28,9 @@ actor {
     */
 
     // dupplicate func with challenge 4
-    // public shared (msg) func add_favorite_number(n : Nat) : async () {
-    //     favoriteNumber.put(msg.caller, n);
-    // };
+    public shared (msg) func add_favorite_number(n : Nat) : async () {
+        favoriteNumber.put(msg.caller, n);
+    };
 
     public query (msg) func show_favorite_number() : async ?Nat {
         favoriteNumber.get(msg.caller);
