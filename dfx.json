@@ -23,6 +23,23 @@
     "day_5_challenge_9": {
       "main": "day_5_challenge_9.mo",
       "type": "motoko"
+    },
+    "day_6": {
+      "main": "main.mo",
+      "type": "motoko"
+    },
+    "day_6_challenge_8": {
+      "main": "day_6_challenge_8.mo",
+      "type": "motoko"
+    },
+    "day_6_challenge_9_10": {
+      "main": "day_6_challenge_9_10.mo",
+      "type": "motoko"
+    },
+    "ledger": {
+      "type": "custom",
+      "wasm": "ledger/ledger.wasm",
+      "candid": "ledger/ledger.public.did"
     }
   },
   "defaults": {
