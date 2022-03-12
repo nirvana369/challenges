@@ -166,6 +166,6 @@ actor {
     **/
 
     /**
-        Challenge 9 : day_6_challenge_9_10.mo
+        Challenge 9 + 10: day_6_challenge_9_10.mo
     **/
 };
